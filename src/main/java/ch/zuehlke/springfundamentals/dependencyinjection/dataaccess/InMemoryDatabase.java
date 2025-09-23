@@ -2,12 +2,13 @@ package ch.zuehlke.springfundamentals.dependencyinjection.dataaccess;
 
 import ch.zuehlke.springfundamentals.dependencyinjection.domain.Customer;
 import ch.zuehlke.springfundamentals.dependencyinjection.domain.MailingAddress;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class InMemoryDatabase {
 
-  public static final Map<String, Customer> DATABASE = new HashMap<String, Customer>() {{
+  public static final Map<String, Customer> DATABASE = new HashMap<>() {{
     put("1", new Customer("1", "Hans Wurst", new MailingAddress("Hauptstrasse 2", "Zürich"), "hans@wurst.ch"));
     put("2", new Customer("2", "Peter Peterson", new MailingAddress("Bahnhofsweg 100", "Bern"), "peter@peterson.ch"));
   }};
